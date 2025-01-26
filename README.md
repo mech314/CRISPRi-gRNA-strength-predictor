@@ -1,6 +1,6 @@
 # CRISPRi gRNA Strength Predictor
 
-This repository provides a comprehensive framework for predicting the strength of gRNAs in CRISPR interference (CRISPRi) experiments. By engineering features from gRNA sequences and leveraging machine learning models, this pipeline predicts the effectiveness of gRNA-mediated repression.
+This repository provides a comprehensive framework for predicting the strength of gRNAs in CRISPR interference (CRISPRi) experiments. By engineering features from gRNA sequences and catboost classification and regression models, this pipeline predicts the effectiveness of gRNA-mediated repression.
 
 ## **Pipeline Overview**
 The pipeline includes the following steps:
@@ -12,8 +12,8 @@ The pipeline includes the following steps:
    - Detection of specific sequence motifs.
    - Position-specific and nucleotide count features.
 3. Handling class imbalance using SMOTE and SMOTE-Tomek.
-4. Training and evaluation of machine learning models (e.g., CatBoost).
-5. Model evaluation using metrics such as accuracy, precision, recall, and AUC.
+4. Training and evaluation of machine learning models (e.g., CatBoost, SVC).
+5. Evaluation the model using accuracy, precision, recall, and AUC.
 
 ## **Requirements**
 The pipeline is implemented in Python and requires the following dependencies:
