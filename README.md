@@ -1,23 +1,33 @@
- CRISPRi gRNA Strength Predictor
+# CRISPRi gRNA Strength Predictor
 
-This repository focuses on predicting the strength of CRISPR interference (CRISPRi)-mediated gene repression using machine learning techniques. By leveraging features from recent literature, such as gRNA sequences and their proximity to the PAM site, this project aims to train a classification model to identify key factors influencing repression strength. Additionally, it explores inconsistencies in reported data to provide insights into contradictory findings and enhance our understanding of the determinants of CRISPRi effectiveness.
+This repository provides a comprehensive framework for predicting the strength of gRNAs in CRISPR interference (CRISPRi) experiments. By engineering features from gRNA sequences and leveraging machine learning models, this pipeline predicts the effectiveness of gRNA-mediated repression.
 
-## Features
+## **Pipeline Overview**
+The pipeline includes the following steps:
+1. Data preprocessing and merging multiple input datasets.
+2. Feature engineering from gRNA sequences, including:
+   - GC content computation.
+   - Melting temperature calculation.
+   - Self-folding minimum free energy (MFE) estimation.
+   - Detection of specific sequence motifs.
+   - Position-specific and nucleotide count features.
+3. Handling class imbalance using SMOTE and SMOTE-Tomek.
+4. Training and evaluation of machine learning models (e.g., CatBoost).
+5. Model evaluation using metrics such as accuracy, precision, recall, and AUC.
 
-- **Data Analysis**: Examination of gRNA sequences and their associated features.
-- **Machine Learning Model**: Training of a classification model to predict gRNA repression strength.
-- **Inconsistency Exploration**: Analysis of discrepancies in reported data to uncover potential contradictions.
+## **Requirements**
+The pipeline is implemented in Python and requires the following dependencies:
 
-## Requirements
+### **Python Dependencies**
+- `numpy`
+- `pandas`
+- `subprocess`
+- `seaborn`
+- `matplotlib`
+- `scikit-learn`
+- `imbalanced-learn`
+- `catboost`
 
-To run the analyses and models in this repository, ensure you have the following installed:
-
-- **Python** (version 3.6 or higher)
-- **Jupyter Notebook**
-
-### Python Packages
-
-Install the required Python packages using `pip`:
-
+#### Install Python packages via pip:
 ```bash
-pip install numpy pandas seaborn matplotlib scikit-learn catboost imbalanced-learn
+pip install numpy pandas seaborn matplotlib scikit-learn imbalanced-learn catboost
