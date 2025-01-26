@@ -20,4 +20,4 @@ To run the analyses and models in this repository, ensure you have the following
 Install the required Python packages using `pip`:
 
 ```bash
-pip install pandas numpy scikit-learn matplotlib seaborn
+pip install numpy pandas seaborn matplotlib scikit-learn catboost imbalanced-learn
